@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning Garden - Activities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Fun Activities at the Interactive Learning Garden!</h2>
+
+        <p>Get ready to learn and have fun with these interactive activities designed to spark your curiosity about healthy food and sustainable agriculture.</p>
+
+        <h3>Let's Play!</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.healthyeating.org/products-and-activities/games-activities/myplate">Play the Food Match Game</a> - Test your knowledge of healthy food categories and their corresponding foods.
+            </li>
+            <li>
+                <a href="https://problemplant.com/quiz">Take the Grow-It Quiz!</a> - Challenge yourself with questions about plant growth, gardening practices, and the environment.
+            </li>
+        </ul>
+
+        <h3>Interactive Activities:</h3>
+
+        <div id="plant-growth">
+            <h3>Plant Growth Simulation</h3>
+            <p>Click on the seed to plant it and watch it sprout!</p>
+            <img src="https://th.bing.com/th/id/OIP.gtTzp8vqgcQ-Jk4aZYoiDQHaFp?rs=1&pid=ImgDetMain" alt="Seed" id="plantable-seed" onclick="plantGrowth()">
+        </div>
+
+        <script>
+            function plantGrowth() {
+                // Simulate plant growth by changing the image source
+                document.getElementById("plantable-seed").src = "https://th.bing.com/th/id/OIP.J7p71HyMkLUVws221dUtVAHaE1?rs=1&pid=ImgDetMain";
+            }
+        </script>
+
+        <div id="healthy-plate-game">
+            <h3>Healthy Plate Game</h3>
+            <p>Create a balanced meal by selecting one food from each group!</p>
+            <div class="plate">
+                <div class="section" id="fruits">Fruits</div>
+                <div class="section" id="vegetables">Vegetables</div>
+                <div class="section" id="protein">Protein</div>
+                <div class="section" id="grains">Grains</div>
+                <div class="section" id="dairy">Dairy</div>
+            </div>
+            <div class="food-cards">
+                <div class="card" data-food-group="fruits">Apple</div>
+                <div class="card" data-food-group="fruits">Banana</div>
+                <div class="card" data-food-group="vegetables">Carrot</div>
+                <div class="card" data-food-group="vegetables">Broccoli</div>
+                <div class="card" data-food-group="protein">Chicken</div>
+                <div class="card" data-food-group="protein">Fish</div>
+                <div class="card" data-food-group="grains">Bread</div>
+                <div class="card" data-food-group="grains">Rice</div>
+                <div class="card" data-food-group="dairy">Milk</div>
+                <div class="card" data-food-group="dairy">Cheese</div>
+            </div>
+            <button id="check-meal">Check My Meal!</button>
+            <div id="result"></div>
+        </div>
+
+        <style>
+            /* Add CSS styles here */
+            
+            .plate {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .section {
+                width: 20%;
+                height: 100px;
+                border: 1px solid #ccc;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .food-cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .card {
+                width: 20%;
+                height: 50px;
+                border: 1px solid #ccc;
+                margin: 10px;
+                padding: 10px;
+                text-align: center;
+                cursor: pointer;
+            }
+            
+            .card:hover {
+                background-color: #f0f0f0;
+            }
+            
+            #check-meal {
+                margin-top: 20px;
+            }
+            
+            #result {
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                color: #006600;
+            }
+            
+            header nav ul li a:hover {
+                /* Style changes applied on hover */
+                background-color: #d0f0c0;
+                /* Lighter green on hover */
+                color: #006400;
+                /* Darker green text on hover */
+                text-decoration: underline;
+                /* Underline decoration */
+            }
+            /* Body styles */
+            
+            body {
+                font-family: Arial, sans-serif;
+                /* Choose a readable font */
+                margin: 0;
+                padding: 0;
+                background-color: #f5dac6;
+                /* Light yellow background */
+            }
+            /* Header styles */
+            
+            header {
+                background-color: #c1f59e;
+                /* Lighter green for header */
+                padding: 20px;
+            }
+            /* Navigation styles */
+            
+            nav {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            nav li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            
+            nav a {
+                text-decoration: none;
+                color: #333;
+                /* Dark gray */
+                font-weight: bold;
+            }
+            
+            nav a:hover {
+                color: #006400;
+                /* Darker green on hover */
+                text-decoration: underline;
+                /* Underline decoration */
+            }
+            /* Main content styles */
+            
+            main {
+                padding: 20px;
+            }
+            
+            h2,
+            h3 {
+                margin: 0 0 10px 0;
+                color: #111;
+                /* Black */
+            }
+            
+            p {
+                line-height: 1.5;
+                margin-bottom: 15px;
+                color: #333;
+                /* Dark gray for text content */
+            }
+            /* Image styling */
+            
+            img {
+                display: block;
+                /* Ensure image fills its container width */
+                margin: 20px auto;
+                /* Add margin and center alignment */
+                max-width: 70%;
+                /* Optional: Limit image width */
+            }
+            /* Activity section styling (optional) */
+            
+            .quick-activity {
+                background-color: #87d073;
+                /* Light mint green for activity section */
+                padding: 20px;
+                text-align: center;
+                /* Center text within activity section */
+            }
+            /* Call to action section styles (optional) */
+            
+            .call-to-action {
+                background-color: #15966d;
+                /* Light mint green for call to action */
+                padding: 20px;
+                text-align: center;
+                /* Center text within call to action section */
+            }
+            
+            .call-to-action ul {
+                list-style: disc;
+                /* Display bullet points */
+                padding: 0;
+                margin: 1em 0;
+            }
+            
+            body {
+                background-image: url("https://thumbs.dreamstime.com/z/spring-summer-background-green-leaves-light-bokeh-frame-place-text-47691672.jpg?w=450");
+                /* Replace with actual image URL */
+                background-repeat: no-repeat;
+                /* Optional: Control how the image repeats */
+                background-position: center;
+                /* Optional: Control image placement */
+                background-size: cover;
+                /* Optional: Control image size */
+            }
+        </style>
+
+        <script>
+            const plateSections = document.querySelectorAll('.section');
+            const foodCards = document.querySelectorAll('.card');
+            const checkMealButton = document.getElementById('check-meal');
+            const resultDiv = document.getElementById('result');
+
+            let selectedFoods = {};
+
+            foodCards.forEach((card) => {
+                card.addEventListener('click', () => {
+                    const foodGroup = card.dataset.foodGroup;
+                    const section = document.getElementById(foodGroup);
+                    section.innerHTML = card.textContent;
+                    selectedFoods[foodGroup] = card.textContent;
+                });
+            });
+
+            checkMealButton.addEventListener('click', () => {
+                if (Object.keys(selectedFoods).length === 5) {
+                    resultDiv.textContent = 'Congratulations! You have created a balanced meal!';
+                } else {
+                    resultDiv.textContent = 'Oops! You need to select one food from each group.';
+                }
+            });
+        </script>
+
+        <h3>Fun Facts</h3>
+        <ul>
+            <li>Did you know that carrots come in different colors like purple, orange, and even yellow?</li>
+            <li>A single sunflower head can contain over 1,000 seeds!</li>
+            <li>Composting food scraps and yard waste can create a nutrient-rich fertilizer for your garden.</li>
+        </ul>
+        <h3> QUICK ACTIVITY</h3>
+        <p> We all consume Fruits and Vegetables on a everyday basis as a part of our diet. Scan your Kitchen to see how much Fruit and Vegetable waste you produce. Collect that waste and try to make a Compost out of it.</p>
+        <br>
+        <img src="Images/Soil Compost.jpg">
+        <p>This is a quick and easy way to make a small change in this world as a responsible individual. TRY IT TODAY!!!</p>
+    </main>
+</body>
+
+</html>

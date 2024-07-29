@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Learning Garden - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? We'd love to hear from you!</p>
+
+        <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+
+        <p><strong>Contact Form:**</p>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <br>
+      <select name="contact-type">
+        <option value="question">Question</option>
+        <option value="feedback">Feedback</option>
+      </select>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function(event) {
+  // Prevent default form submission (avoids full page reload)
+  event.preventDefault();
+
+  // Gather form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  const contactType = document.querySelector('#contact-form select').value;
+
+  // Basic validation (more can be added)
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all required fields (Name, Email, Message)');
+    return;  // Exit the function if validation fails
+  }
+
+  // Simulate sending data (replace with your actual logic)
+  console.log('Sending data...');
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Message:', message);
+  console.log('Contact Type:', contactType);
+
+  // After simulating data sending, clear the form for better UX
+  contactForm.reset();
+
+  alert('Thank you for your message! We will get back to you soon.');
+});
+
+    </script>
+
+    <p><strong>Connect with Us on Social Media:</strong></p>
+        <ul class="social-media">
+            <li>
+                <a href="https://www.instagram.com/"><img src="Images/Instagram.jpeg" alt="Instagram Profile" width="100" , height="100"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/"><img src="Images/Facebook.jpeg" alt="Facebook Profile" width="100" , height="100"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/"><img src="Images/LinkedIn.jpeg" alt="LinkedIn Profile" width="100" , height="100"></a>
+            </li>
+        </ul>
+    </main>
+</body>
+
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        /* Remove default body margin for better centering */
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        /* Optional class to wrap content within main section for better styling */
+        width: 80%;
+        /* Adjust width as needed */
+        text-align: center;
+        /* Center elements within the container */
+        margin: 0 auto;
+        /* Add margin for better separation from header and footer */
+    }
+    
+    nav ul {
+        list-style: none;
+        /* Remove default bullet points from navigation list */
+        padding: 0;
+        /* Remove default padding from navigation list */
+        margin: 0;
+        /* Remove default margin from navigation list */
+    }
+    
+    nav li {
+        display: inline-block;
+        /* Display navigation items inline */
+        margin: 0 10px;
+        /* Add spacing between navigation items */
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    p {
+        margin-bottom: 10px;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-media li {
+        margin: 0 10px;
+        /* Add spacing between social media icons */
+    }
+    
+    .social-media img {
+        width: 100px;
+        height: 100px;
+    }
+    /* Adjust image size based on your actual image dimensions */
+    
+    header nav ul li a:hover {
+        /* Style changes applied on hover */
+        background-color: #d0f0c0;
+        /* Lighter green on hover */
+        color: #006400;
+        /* Darker green text on hover */
+        text-decoration: underline;
+        /* Underline decoration */
+    }
+    /* Basic Styles */
+    
+    body {
+        background-color: #f0f8ff;
+        /* Light blue background */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        margin: 1rem 0;
+    }
+    
+    p,
+    blockquote {
+        margin: 0.5rem 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    a:hover {
+        color: #007bff;
+    }
+    
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        margin: 0.5rem 0;
+    }
+    /* Header Styling */
+    
+    nav {
+        background-color: #90EE90;
+        /* Green color for header */
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav ul {
+        padding: 0;
+    }
+    
+    nav li {
+        margin: 0 1rem;
+    }
+    
+    a:hover {
+        background-color: #d0f0c0;
+        /* Lighter green on hover for nav */
+        color: #006400;
+        /* Darker green text on hover for nav */
+        text-decoration: underline;
+    }
+    /* Main Content Styling */
+    
+    main {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        /* Center content within the viewport */
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    p {
+        margin-bottom: 10px;
+        text-align: justify;
+        /* Justify text for better readability */
+    }
+    /* Contact Form Styling */
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        /* Form width set to 100% */
+    }
+    
+    .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;
+        /* Set input width to 100% of form container */
+    }
+    
+    .contact-form button {
+        background-color: #4CAF50;
+        /* Green color for submit button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .contact-form button:hover {
+        background-color: #3e8e41;
+        /* Darker green on hover for button */
+    }
+    /* Social Media Styling */
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-media li {
+        margin: 0 10px;
+    }
+    
+    .social-media img {
+        width: 50px;
+        height: 50px;
+        /* Adjust image size as needed */
+    }
+    
+    body {
+        background-image: url("Images/Garden\ 2.jpg");
+        /* Replace with actual image URL */
+        background-repeat: no-repeat;
+        /* Optional: Control how the image repeats */
+        background-position: center;
+        /* Optional: Control image placement */
+        background-size: cover;
+        /* Optional: Control image size */
+    }
+</style>
+
+
+</html>
